@@ -6,23 +6,35 @@ import { Github } from 'lucide-brands';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-cyan-500 selection:text-slate-950 pt-20">
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
+      <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md transition-all duration-300 ease-in-out">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2 font-mono text-lg font-bold text-cyan-400">
             <Cpu className="h-6 w-6" />
             <span>MECHATRONICS.DEV</span>
           </a>
           <nav className="hidden space-x-8 text-sm font-medium text-slate-300 md:flex">
-            <a href="#projects" className="hover:text-cyan-400 transition">Projects</a>
-            <a href="#skills" className="hover:text-cyan-400 transition">Tech Stack</a>
-            <a href="#workflow" className="hover:text-cyan-400 transition">Remote Workflow</a>
-            <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
+            <a href="#projects" className="relative group hover:text-cyan-400 transition-colors duration-200 ease-in-out">
+              Projects
+              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-cyan-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-in-out origin-left"></span>
+            </a>
+            <a href="#skills" className="relative group hover:text-cyan-400 transition-colors duration-200 ease-in-out">
+              Tech Stack
+              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-cyan-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-in-out origin-left"></span>
+            </a>
+            <a href="#workflow" className="relative group hover:text-cyan-400 transition-colors duration-200 ease-in-out">
+              Remote Workflow
+              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-cyan-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-in-out origin-left"></span>
+            </a>
+            <a href="#contact" className="relative group hover:text-cyan-400 transition-colors duration-200 ease-in-out">
+              Contact
+              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-cyan-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-in-out origin-left"></span>
+            </a>
           </nav>
           <a
             href="#contact"
-            className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-cyan-400 transition"
+            className="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 transition-all duration-200 ease-in-out hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/30"
           >
             Hire Remote
           </a>
@@ -45,7 +57,7 @@ export default function HomePage() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-slate-950 hover:bg-cyan-400 transition"
+              className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition-all duration-200 ease-in-out hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/30"
             >
               Explore Projects <ArrowRight className="h-4 w-4" />
             </a>
@@ -53,7 +65,7 @@ export default function HomePage() {
               href={ENGINEER_PROFILE.github}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 font-semibold text-slate-200 hover:border-slate-500 transition"
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 font-semibold text-slate-200 transition-all duration-200 ease-in-out hover:border-slate-500 hover:bg-slate-800"
             >
               <Github className="h-4 w-4" /> GitHub & CAD Repos
             </a>

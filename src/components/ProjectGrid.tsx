@@ -28,10 +28,10 @@ export default function ProjectGrid() {
           <button
             key={cat.id}
             onClick={() => setActiveFilter(cat.id)}
-            className={`rounded-lg px-4 py-2 text-xs font-semibold transition ${
+            className={`rounded-lg px-4 py-2 text-xs font-semibold cursor-pointer transition-all duration-200 ease-in-out ${
               activeFilter === cat.id
                 ? 'bg-cyan-500 text-slate-950'
-                : 'bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-600'
+                : 'bg-slate-900 text-slate-300 border border-slate-800 hover:border-cyan-500 hover:text-cyan-400'
             }`}
           >
             {cat.label}
@@ -44,7 +44,8 @@ export default function ProjectGrid() {
         {filteredProjects.map((project) => (
           <article
             key={project.id}
-            className="flex flex-col justify-between rounded-xl border border-slate-800 bg-slate-900/60 p-6 transition hover:border-cyan-500/50"
+            onClick={() => setSelectedProject(project)}
+            className="flex flex-col justify-between rounded-xl border border-slate-800 bg-slate-900/60 p-6 cursor-pointer transition-all duration-200 ease-in-out hover:border-cyan-500/80 hover:shadow-lg hover:shadow-cyan-500/10"
           >
             <div>
               <div className="mb-3 flex items-center justify-between font-mono text-xs text-cyan-400">
@@ -70,7 +71,7 @@ export default function ProjectGrid() {
               </div>
               <button
                 onClick={() => setSelectedProject(project)}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-950 py-2.5 text-xs font-semibold text-cyan-400 transition hover:border-cyan-500 hover:bg-cyan-500/10"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-950 py-2.5 text-xs font-semibold text-cyan-400 cursor-pointer transition-all duration-200 ease-in-out hover:border-cyan-500 hover:bg-cyan-500/10 hover:shadow-lg hover:shadow-cyan-500/30"
               >
                 <Layers className="h-4 w-4" />
                 Inspect Engineering Deliverables
@@ -101,7 +102,7 @@ export default function ProjectGrid() {
               </div>
               <button
                 onClick={() => setSelectedProject(null)}
-                className="rounded-lg p-1 text-slate-400 hover:bg-slate-800 hover:text-white"
+                className="rounded-lg p-1 text-slate-400 cursor-pointer hover:bg-slate-800 hover:text-white transition-colors duration-200 ease-in-out"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -131,7 +132,7 @@ export default function ProjectGrid() {
                   href={selectedProject.repoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-slate-950 hover:bg-cyan-400"
+                  className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-slate-950 cursor-pointer transition-all duration-200 ease-in-out hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/30"
                 >
                   View CAD & Code Repository
                   <ExternalLink className="h-4 w-4" />
