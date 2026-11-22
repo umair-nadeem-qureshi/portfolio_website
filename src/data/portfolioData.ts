@@ -11,13 +11,13 @@ export interface Project {
   }
   
   export const ENGINEER_PROFILE = {
-    name: 'Your Name',
+    name: 'Umair Nadeem Qureshi',
     role: 'Mechatronics & Robotics Engineer',
     headline: 'Designing Multi-Axis Robotics, CAD Systems & Industrial Automation',
     bio: 'Mechatronics Engineer specializing in articulated robotic arms, kinematics simulations, and CNC tending automation. Experienced in delivering production-ready 3D CAD assemblies, servo control architectures, and digital twins for remote teams.',
-    email: 'engineer@example.com',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
+    email: 'umairnadeem.qureshi@outlook.com',
+    github: 'https://github.com/umairnadeem8',
+    linkedin: 'https://linkedin.com/in/umair-nadeem-qureshi',
     availability: 'Available for Remote Engineering Roles',
   };
   
