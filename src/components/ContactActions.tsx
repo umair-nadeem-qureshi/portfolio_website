@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Check, Copy, Linkedin } from 'lucide-react';
+import { Check, Copy} from 'lucide-react';
+import { Linkedin } from 'lucide-brands';
 import { ENGINEER_PROFILE } from '@/data/portfolioData';
 
 export default function ContactActions() {
@@ -35,4 +36,3 @@ export default function ContactActions() {
     </div>
   );
 }
-ßßßß
